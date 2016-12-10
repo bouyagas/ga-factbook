@@ -1,0 +1,19 @@
+h1, p{
+  color: blue;
+  text-align: center;
+}
+
+
+.map-selected {
+  fill: #E3DA37;
+}
+
+.map-unselected {
+  fill: #699EAA;
+}
+
+.map-selected:hover, .map-unselected:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map*/

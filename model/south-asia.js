@@ -5,7 +5,7 @@ const DB_CONNECTION = 'mongodb://localhost:27017/ga_factbook';
 function getAllSouthAsiaCountries(req, res, next) {
   MongoClient.connect(DB_CONNECTION, (err, db) => {
     if (err) return next(err);
-    db.collection('south-Asia')
+    db.collection('south-asia')
        .find({})
        .toArray((toArrErr, data) => {
          if (toArrErr) return next(toArrErr);

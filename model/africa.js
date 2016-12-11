@@ -1,5 +1,4 @@
 const { MongoClient, OBjectID } = require('mongodb');
-
 const DB_CONNECTION = 'mongodb://localhost:27017/ga_factbook';
 
 function getAllAfricanCountries(req, res, next) {

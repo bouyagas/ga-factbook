@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectID } = require('mongodb');
 const DB_CONNECTION = 'mongodb://localhost:27017/ga_factbook';
 
 function getAllAfricanCountries(req, res, next) {
@@ -7,7 +7,7 @@ function getAllAfricanCountries(req, res, next) {
     db.collection('africa')
       .find({})
       .toArray((toArrErr, data) => {
-        if (toArrErr) return next(toArrErr);
+        if (toArrErr) next(toArrErr);
         res.africa = data;
         db.close();
         return next();
@@ -19,3 +19,4 @@ function getAllAfricanCountries(req, res, next) {
 
 
 module.exports = { getAllAfricanCountries };
+

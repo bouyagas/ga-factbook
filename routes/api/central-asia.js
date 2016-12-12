@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const {  getAllcentralAsia } =  require('../../model/central-asia.js');
+const { getAllcentralAsia } = require('../../model/central-asia.js');
 
 const sendSJONrep = (req, res) => res.json(res.centralAsia || []);
 

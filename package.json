@@ -26,7 +26,8 @@
     "node-fetch": "^1.6.3",
     "path": "^0.12.7",
     "react-d3-map": "^0.8.3",
-    "react-d3-map-core": "^0.13.7"
+    "react-d3-map-core": "^0.13.7",
+    "react-world-map": "^1.0.13"
   },
   "devDependencies": {
     "babel": "^6.5.2",

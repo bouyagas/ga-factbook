@@ -1,0 +1,18 @@
+.map {
+  text-align: center;
+  background-color: #000;
+  height:50vh;
+}
+
+
+.map-selected {
+  fill: #FF0000;
+}
+
+.map-unselected {
+  fill: #C0C0C0;
+}
+
+.map-selected:hover, .map-unselected:hover {
+  cursor: pointer;
+}

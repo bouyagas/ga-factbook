@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAllEurpeanCountries } =  require('../../model/europe.js');
+const { getAllEurpeanCountries } = require('../../model/europe.js');
 
 const sendSJONrep = (req, res) => res.json(res.europe || []);
 

@@ -1,49 +1,87 @@
 import React, { Component } from 'react';
-import Map from './Map/Map';
-import './App.css';
+import NorthAmericaContainer from "./NorthAmericaContainer/NorthAmericaContainer.jsx";
+import AfricaContainer from './AfricaContainer/AfricaContainer.jsx';
+import AntarctinaContainer from './AntarctincaContainer/AntarcticaContainer.jsx';
+import Map from './Map/Map.jsx';
 
 export default class App extends Component {
-  construtor() {
-    super();
+
+  constructor() {
+  super();
     this.state = {
+      northamerica: [],
       africa: [],
       antarctica: [],
-      australiaOceania: [],
-      centralAmericaAndCaribbean: [],
-      centralAsia: [],
-      eastAndSoutheastAsia: [],
-      europe: [],
-      meta: [],
-      middleEast: [],
-      northAmerica: [],
-      oceans: [],
-      southAmerica: [],
-      southAsia: [],
-      world: [],
     };
   }
 
-   getAfricanCountries(){
-    fetch('/api/africa', {
-      header: {
-        Content: 'application/json',
+  getAllNorthAmericaCountries() {
+    fetch(`/api/northAmerica`, {
+      headers: {
+        'Content-Type': 'application/json',
       },
       method: 'GET',
     })
-     .then(r => r.json());
-     .then((africa) => {
-      console.log(africa);
-      this.setState = ({
-        africa: afican
-      });
+     .then(r => r.json())
+     .then((data) => {
+      console.log(data);
+       this.setState = ({
+         northamerican: data
+       });
      })
     .catch(err => console.log('Error', err));
-   }
+  }
+
+  getAllAfricaCountries() {
+    fetch(`/api/africa`, {
+       headers: {
+        'Content-Type': 'application/json',
+       },
+       method: 'GET',
+      })
+    .then(r => r.json())
+    .then((data)=> {
+      console.log(data);
+      this.setState = ({
+       african: data
+      });
+    })
+    .catch(err => console.log('Error', err));
+  }
+    getAllAntarcticaCountries() {
+      fetch(`/api/antarctica`, {
+        headers: {
+         'Content-Type': 'application/json',
+         },
+         method: 'GET',
+        })
+      .then(r => r.json())
+      .then((data) => {
+        console.log(data)
+        this.setState = ({
+          antarctica: data
+          });
+        })
+      .catch(err => console.log('Error', err));
+    }
+
   render() {
-    return(
+    return (
       <div id="app">
-        <h1>Welcome GA factbook</h1>
+        <h1>Welcome GA Factbook</h1>
         <Map />
+        <NorthAmericaContainer
+         getAllNorthAmericaCountries={this.getAllNorthAmericaCountries.bind(this)}
+         northamerica={this.state.northamerica}
+         />
+        <AfricaContainer
+         getAllAfricaCountries={this.getAllAfricaCountries.bind(this)}
+         africa={this.state.africa}
+        />
+        <AntarctinaContainer
+        getAllAntarcticaCountries={this.getAllAntarcticaCountries.bind(this)}
+        antarctica={this.state.antarctica}
+        />
       </div>
     );
   }

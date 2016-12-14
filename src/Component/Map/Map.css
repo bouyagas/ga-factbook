@@ -1,18 +1,26 @@
 .map {
   text-align: center;
   background-color: #000;
-  height:50vh;
+  height:52vh;
+  opacity: 0.5;
+  border-radius: 50px 25px;
 }
 
 
 .map-selected {
-  fill: #FF0000;
+  fill: #C0C0C0;
+
 }
 
 .map-unselected {
-  fill: #C0C0C0;
+ fill:  #2E8B57;
 }
 
 .map-selected:hover, .map-unselected:hover {
   cursor: pointer;
+}
+
+.map-img{
+  height: 50vh;
+  width: 80vw;
 }

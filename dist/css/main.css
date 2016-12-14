@@ -1,19 +1,20 @@
 .map {
   text-align: center;
-  background-color: #000;
+  /*background-color: #000;
   height:52vh;
   opacity: 0.5;
-  border-radius: 50px 25px;
+  border-radius: 50px 25px;*/
 }
 
 
 .map-selected {
-  fill: #C0C0C0;
+fill:  #2E8B57;
 
 }
 
 .map-unselected {
- fill:  #2E8B57;
+
+  fill: #C0C0C0;
 }
 
 .map-selected:hover, .map-unselected:hover {
@@ -21,8 +22,25 @@
 }
 
 .map-img{
-  height: 50vh;
-  width: 80vw;
+  height: 55vh;
+  width: 90vw;
 }
+body{
+  margin: 0, auto;
+}
+
+#app {
+  background-image: url(/img/tex.Md-Xv.jpg);
+  background-size: cover;
+  background-repeat: none;
+  height: 98vh;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+
 
 /*# sourceMappingURL=main.css.map*/

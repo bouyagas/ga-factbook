@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import NorthAmericaContainer from "./NorthAmericaContainer/NorthAmericaContainer.jsx";
 import AfricaContainer from './AfricaContainer/AfricaContainer.jsx';
-import AntarctinaContainer from './AntarctincaContainer/AntarcticaContainer.jsx';
+import AntarcticaContainer from './AntarcticaContainer/AntarcticaContainer.jsx';
+import EuropeanContainer from './EuropeanContainer/EuropeanContainer.jsx'
 import Map from './Map/Map.jsx';
+import './App.css';
 
 export default class App extends Component {
 
   constructor() {
-  super();
+    super();
     this.state = {
       northamerica: [],
       africa: [],
       antarctica: [],
+      europe: [],
     };
   }
 
@@ -26,7 +29,7 @@ export default class App extends Component {
      .then((data) => {
       console.log(data);
        this.setState = ({
-         northamerican: data
+         northamerican: data,
        });
      })
     .catch(err => console.log('Error', err));
@@ -57,14 +60,30 @@ export default class App extends Component {
         })
       .then(r => r.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         this.setState = ({
-          antarctica: data
+          antarctica: data,
           });
         })
       .catch(err => console.log('Error', err));
     }
 
+    getAllEuropeanCountries() {
+      fetch(`/api/europe`, {
+        Headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'GET',
+      })
+      .then(r => r.json())
+      .then((data) => {
+        console.log(data);
+        this.setState = ({
+          europe: data,
+        });
+      })
+      .catch(err => console.log('Error', err));
+    }
   render() {
     return (
       <div id="app">
@@ -78,10 +97,14 @@ export default class App extends Component {
          getAllAfricaCountries={this.getAllAfricaCountries.bind(this)}
          africa={this.state.africa}
         />
-        <AntarctinaContainer
+        <AntarcticaContainer
         getAllAntarcticaCountries={this.getAllAntarcticaCountries.bind(this)}
         antarctica={this.state.antarctica}
         />
+        <EuropeanContainer
+         getAllEuropeanCountries={this.getAllEuropeanCountries.bind(this)}
+         europe={this.state.europe}
+         />
       </div>
     );
   }

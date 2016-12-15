@@ -2,7 +2,7 @@
   "name": "project_4",
   "version": "1.0.0",
   "engines": {
-    "node": "7.2.0"
+    "node": "7.1.0"
   },
   "private": true,
   "description": "",

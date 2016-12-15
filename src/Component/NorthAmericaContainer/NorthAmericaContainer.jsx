@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
-import northAmericaTemplate from './NorthAmericaTemplate/NorthAmericaTemplate.jsx';
+import React from 'react';
+import NorthAmericaTemplate from './NorthAmericaTemplate/NorthAmericaTemplate.jsx';
 import './NorthAmericaContainer.css';
 
 
-export default class NorthAmericaContainer extends Component {
-  renderAllCountries() {
-      return this.props.northamerica.map((country, i) =>
+const NorthAmericaContainer = (props) => {
+  const countries = props.state.northamerica.map((country, i) => {
+    return (
       <NorthAmericaTemplate
         intro={country.Introduction.Background.text}
-        name={country.Government.Capital.name.text}
         key={i}
-       />
-    )
-  }
-  componentWillMount(){
-    this.props.getAllNorthAmericaCountries();
-  }
-  render(){
-    return(
-      <div>
-        {this.renderAllCountries()}
-      </div>
+      />
     );
-  }
-}
+  });
+
+  return (
+    <div id="countries-container">
+      <h2>Introduction</h2>
+      {countries}
+    </div>
+  );
+};
+
+export default NorthAmericaContainer;
+

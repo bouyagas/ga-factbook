@@ -6,7 +6,7 @@ export default class Map extends Component {
 	render() {
 	return(
 	  <div className="map">
-         <WorldMap />
+        <WorldMap />
 	 </div>
      );
   }

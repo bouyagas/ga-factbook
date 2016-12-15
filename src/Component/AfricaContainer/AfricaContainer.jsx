@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AfricaTemplate from './AfricaTemplate/AfricaTemplate.jsx';
 import './AfricaContainer.css';
 
-export default class AfricaContainer extends Component {
-  renderAllAfricanCountries() {
-    return this.props.africa.map((country, i) =>
-    <AfricaTemplate
-      intro={country.Introduction.Background.text}
-      name={country.GovernmentType.Capital.text}
-      key={i}
-      />
-    );
-   }
 
-  componentWillMount() {
-      this.props.getAllAfricaCountries();
-  }
+ const AfricaContainer = (props) => {
+    const countries = props.state.africa.map((country, i) => {
+      return (
+        <AfricaTemplate
+          intro={country.Geography.Location.text}
+          key={i}
+         />
+      );
+     });
 
-    render(){
-     return (
-     	<div>
-     	 {this.renderAllAfricanCountries()}
+    return (
+     	<div >
+     	  {countries}
      	</div>
-     );
-    }
- }
+
+   );
+
+ };
+
+export default AfricaContainer;
+
 

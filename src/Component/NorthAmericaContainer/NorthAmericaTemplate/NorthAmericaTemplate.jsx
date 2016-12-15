@@ -1,10 +1,10 @@
 import React from 'react';
 import './NorthAmericaTemplate.css';
 
-const NorthAmericaTemplate = props => (
+const NorthAmericaTemplate = (props) => (
 	<div>
+     <p>....///....</p>
 	  <p>{props.intro}</p>
-	  <p>{props.name}</p>
 	</div>
 );
 

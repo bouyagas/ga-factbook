@@ -1,5 +1,20 @@
-import React    from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import App      from './Component/App.jsx';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import App from './Component/App.jsx';
+import Map from './Component/Map/Map.jsx';
+import NorthAmericaContainer from './Component/NorthAmericaContainer/NorthAmericaContainer.jsx';
+import AfricaContainer from './Component/AfricaContainer/AfricaContainer.jsx';
+import EuropeanContainer from './Component/EuropeanContainer/EuropeanContainer.jsx';
 
-ReactDOM.render(<App />, document.querySelector('#root-container'));
+
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Map} />
+      <Route path="/northamerica" component={NorthAmericaContainer} />
+      <Route path="/africa" component={AfricaContainer} />
+      <Route path="/europe" component={EuropeanContainer} />
+    </Route>
+  </Router>
+  ), document.querySelector('#root-container'));

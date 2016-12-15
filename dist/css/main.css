@@ -8,13 +8,12 @@
 
 
 .map-selected {
-fill:  #2E8B57;
+  fill: #C0C0C0;
 
 }
 
 .map-unselected {
-
-  fill: #C0C0C0;
+  fill: #87CEFA;
 }
 
 .map-selected:hover, .map-unselected:hover {
@@ -29,17 +28,18 @@ body{
   margin: 0, auto;
 }
 
-#app {
-  background-image: url(/img/tex.Md-Xv.jpg);
+/*#app {
+  background-image: url('./tex.jpg');
   background-size: cover;
   background-repeat: none;
   height: 98vh;
 }
+*/
 
 h1 {
   text-align: center;
   color: #fff;
-  background-color: #000;
+  background-color: #87CEFA;
 }
 
 

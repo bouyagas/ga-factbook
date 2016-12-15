@@ -4,7 +4,6 @@ import './AfricaTemplate.css';
 const AfricaTemplate = props => (
   <div>
   	<p>{props.intro}</p>
-  	<p>{props.name}</p>
   </div>
 );
 

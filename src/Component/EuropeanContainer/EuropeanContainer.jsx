@@ -1,28 +1,25 @@
-import React, { Component } from  'react';
-import './EuropeanTemplate/EuropeanTemplate.jsx';
+import React from 'react';
+import EuropeanTemplate from './EuropeanTemplate/EuropeanTemplate.jsx';
 import './EuropeanContainer.css';
 
 
-export default class EuropeanContainer extends Component {
-	renderAllEuropeanCountries() {
-     return this.props.europe.map((country, i) =>
+const EuropeanContainer = (props) => {
+    const countries = props.state.africa.map((country, i) => {
+      return (
         <EuropeanTemplate
-           intro={country.Introduction.Background.text}
-           name={country.Government.Countryname.conventionalshortform.text}
-           key={i}
-        />
+          intro={country.Geography.Location.text}
+          key={i}
+         />
       );
-	}
+     });
 
-	componentWillMount(){
-		this.props.getAllEuropeanCountries();
-	}
+    return (
+      <div >
+        {countries}
+      </div>
 
-	render(){
-		return(
-			<div>
-				{this.renderAllEuropeanCountries()}
-			</div>
-		)
-	}
-}
+   );
+
+ };
+
+export default EuropeanContainer;

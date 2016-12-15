@@ -8,13 +8,12 @@
 
 
 .map-selected {
-fill:  #2E8B57;
+  fill: #C0C0C0;
 
 }
 
 .map-unselected {
-
-  fill: #C0C0C0;
+  fill: #87CEFA;
 }
 
 .map-selected:hover, .map-unselected:hover {

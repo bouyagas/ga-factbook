@@ -1,3 +1,29 @@
+.map {
+  text-align: center;
+  /*background-color: #000;
+  height:52vh;
+  opacity: 0.5;
+  border-radius: 50px 25px;*/
+}
+
+
+.map-selected {
+  fill: #C0C0C0;
+
+}
+
+.map-unselected {
+  fill: #87CEFA;
+}
+
+.map-selected:hover, .map-unselected:hover {
+  cursor: pointer;
+}
+
+.map-img{
+  height: 65vh;
+  width: 90vw;
+}
 body{
   margin: 0, auto;
 }
@@ -25,3 +51,5 @@ h1 {
     text-decoration: none;
   }
 
+
+/*# sourceMappingURL=main.css.map*/

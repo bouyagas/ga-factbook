@@ -100,11 +100,8 @@ export default class App extends Component {
           // STATE
              state: this.state,
         })}
-        <Link to="northamerica" className="navbar-button">north america</Link>
-         <br/>
-        <Link to="africa" className="navbar-button">africa</Link>
-         <br/>
-          <Link to="europe" className="navbar-button">europe</Link>
+        <Link to="northamerica" className="link-northAmerica">North America</Link>
+
         </div>
     );
   }

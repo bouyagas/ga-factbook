@@ -9,15 +9,14 @@ const EuropeanContainer = (props) => {
         <EuropeanTemplate
           intro={country.Geography.Location.text}
           key={i}
-         />
+        />
       );
      });
 
-    return (
+   return (
       <div >
         {countries}
       </div>
-
    );
 
  };

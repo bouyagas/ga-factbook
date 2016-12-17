@@ -6,6 +6,8 @@ import Map from './Component/Map/Map.jsx';
 import NorthAmericaContainer from './Component/NorthAmericaContainer/NorthAmericaContainer.jsx';
 import AfricaContainer from './Component/AfricaContainer/AfricaContainer.jsx';
 import EuropeanContainer from './Component/EuropeanContainer/EuropeanContainer.jsx';
+import AntarcticaContainer from './Component/AntarcticaContainer/AntarcticaContainer.jsx';
+
 
 
 ReactDOM.render((
@@ -15,6 +17,7 @@ ReactDOM.render((
       <Route path="/northamerica" component={NorthAmericaContainer} />
       <Route path="/africa" component={AfricaContainer} />
       <Route path="/europe" component={EuropeanContainer} />
+      <Route path="/antarctica" component={AntarcticaContainer} />
     </Route>
   </Router>
   ), document.querySelector('#root-container'));

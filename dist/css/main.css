@@ -24,20 +24,10 @@
   height: 65vh;
   width: 90vw;
 }
-body{
-  margin: 0, auto;
-}
 
-/*#app {
-  background-image: url('./tex.jpg');
-  background-size: cover;
-  background-repeat: none;
-  height: 98vh;
-}
-*/
 
 h1 {
-  text-align: center;
+ text-align: center;
   color: #fff;
   background-color: #87CEFA;
 }
@@ -46,10 +36,61 @@ h1 {
     position: relative;
     top: -392px;
     left: 274px;
+    font-size: 18px;
     display: block;
     color: #fff;
     text-decoration: none;
   }
 
+.link-africa{
+    position: relative;
+    top: -243px;
+    left: 682px;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+.link-europe{
+    position: relative;
+    top: -450px;
+    left: 644px;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .link-middleEast{
+    position: relative;
+    top: -408px;
+    left: 747px;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .link-antarctica{
+    position: relative;
+    top: 71px;
+    left: 639px;
+    font-size: 18px;
+    display: block;
+    color: #87CEFA;
+    text-decoration: none;
+  }
+
+  .link-southAmerica{
+     position: relative;
+    top: -261px;
+    left: 380px;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
 
 /*# sourceMappingURL=main.css.map*/

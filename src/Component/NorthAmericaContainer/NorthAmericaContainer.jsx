@@ -8,6 +8,7 @@ const NorthAmericaContainer = (props) => {
     return (
       <NorthAmericaTemplate
         intro={country.Introduction.Background.text}
+        location={country.A}
         key={i}
       />
     );

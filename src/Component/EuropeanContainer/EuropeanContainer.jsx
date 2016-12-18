@@ -4,7 +4,7 @@ import './EuropeanContainer.css';
 
 
 const EuropeanContainer = (props) => {
-    const countries = props.state.africa.map((country, i) => {
+    const countries = props.state.europe.map((country, i) => {
       return (
         <EuropeanTemplate
           intro={country.Geography.Location.text}

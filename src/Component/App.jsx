@@ -4,6 +4,8 @@ import NorthAmericaContainer from './NorthAmericaContainer/NorthAmericaContainer
 import AfricaContainer from './AfricaContainer/AfricaContainer.jsx';
 import EuropeanContainer from './EuropeanContainer/EuropeanContainer.jsx';
 import AntarcticaContainer from './AntarcticaContainer/AntarcticaContainer.jsx';
+import MiddleEastContainer from './MiddleEastContainer/MiddleEastContainer.jsx';
+import southAmericaContainer from './southAmericaContainer/southAmericaContainer.jsx';
 import Map from './Map/Map.jsx';
 import './App.css';
 
@@ -15,6 +17,8 @@ export default class App extends Component {
       africa: [],
       antarctica: [],
       europe: [],
+      middleEast: [],
+      southAmerica: [],
     };
   }
 
@@ -23,6 +27,8 @@ export default class App extends Component {
     this.getAllAfricaCountries();
     this.getAllEuropeanCountries();
     this.getAllAntarcticaCountries();
+    this.getAllMiddleEastCountries();
+    this.getAllSouthAmericanCountries();
   }
 
   getAllNorthAmericaCountries() {
@@ -39,27 +45,27 @@ export default class App extends Component {
       });
     })
     .catch(err => console.log(err));
-    }
+  }
 
 
   getAllAfricaCountries() {
     fetch(`/api/africa`, {
-       headers: {
+      headers: {
         'Content-Type': 'application/json',
-       },
-       method: 'GET',
-      })
+      },
+      method: 'GET',
+    })
     .then(r => r.json())
     .then((data) => {
       console.log(data);
       this.setState({
-       africa: data,
+        africa: data,
       });
     })
     .catch(err => console.log('Error', err));
   }
 
-    getAllEuropeanCountries() {
+  getAllEuropeanCountries() {
       fetch(`/api/europe`, {
         Headers: {
           'Content-Type': 'application/json',
@@ -74,25 +80,58 @@ export default class App extends Component {
         });
       })
       .catch(err => console.log('Error', err));
-    }
+  }
 
-    getAllAntarcticaCountries() {
+  getAllAntarcticaCountries() {
       fetch(`/api/antarctica`, {
         headers: {
-         'Content-Type': 'application/json',
-         },
-         method: 'GET',
-        })
+          'Content-Type': 'application/json',
+        },
+        method: 'GET',
+      })
       .then(r => r.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         this.setState({
           antarctica: data,
         });
       })
       .catch(err => console.log('Error', err));
-    }
+  }
 
+  getAllMiddleEastCountries() {
+      fetch(`/api/middleEast`, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'GET',
+      })
+      .then(r => r.json())
+      .then((data) => {
+        console.log(data);
+        this.setState({
+          middleEast: data,
+        });
+      })
+      .catch(err => console.log('Error', err));
+  }
+
+  getAllSouthAmericanCountries() {
+    fetch(`/api/southAmerica`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'GET',
+    })
+      .then(r => r.json())
+      .then((data) => {
+        console.log(data);
+        this.setState({
+          southAmerica: data,
+        });
+      })
+      .catch(err => console.log('Error', err));
+  }
 
   render() {
     return (
@@ -100,13 +139,15 @@ export default class App extends Component {
         <h1>Welcome to Factbook</h1>
         {this.props.children && React.cloneElement(this.props.children, {
           // STATE
-             state: this.state,
+          state: this.state,
         })}
-          <Link to="northamerica" className="link-northAmerica">North America</Link>
-          <Link to="africa" className="link-northAmerica">Africa</Link>
-          <Link to="europe" className="link-northAmerica">European</Link>
-          <Link to="antarctica" className="link-northAmerica">Antarctica</Link>
-        </div>
+        <Link to="northamerica" className="link-northAmerica">North America</Link>
+        <Link to="africa" className="link-africa">Africa</Link>
+        <Link to="europe" className="link-europe">Europe</Link>
+        <Link to="middleEast" className="link-middleEast">Middle East</Link>
+        <Link to="antarctica" className="link-antarctica">Antarctica</Link>
+        <Link to="southAmerica" className="link-southAmerica">South America</Link>
+      </div>
     );
   }
 }

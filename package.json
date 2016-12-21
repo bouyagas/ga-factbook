@@ -9,8 +9,8 @@
   "main": "server.js",
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules",
-    "heroku-prebuild": "bash: ./script/deployment_react.sh",
-    "heroku-postbuild": "bash: ./script/deployment_cleanup.sh",
+    "heroku-prebuild": "zsh: ./script/deployment_react.sh",
+    "heroku-postbuild": "zsh: ./script/deployment_cleanup.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "rebuild": "webpack -d --progress --colors",
     "watch": "webpack -d --progress --watch",

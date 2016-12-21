@@ -8,7 +8,6 @@ const SouthAmericaContainer = (props) => {
     return (
       <SouthAmericaTemplate
         intro={country.Introduction.Background.text}
-        location={country.Geography.Location.text}
         key={i}
       />
     );

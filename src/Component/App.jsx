@@ -5,7 +5,8 @@ import AfricaContainer from './AfricaContainer/AfricaContainer.jsx';
 import EuropeanContainer from './EuropeanContainer/EuropeanContainer.jsx';
 import AntarcticaContainer from './AntarcticaContainer/AntarcticaContainer.jsx';
 import MiddleEastContainer from './MiddleEastContainer/MiddleEastContainer.jsx';
-import southAmericaContainer from './southAmericaContainer/southAmericaContainer.jsx';
+import SouthAmericaContainer from './SouthAmericaContainer/southAmericaContainer.jsx';
+import AustriliaAndOceaniaContainer from './AustriliaAndOceaniaContainer/AustriliaAndOceaniaContainer.jsx';
 import Map from './Map/Map.jsx';
 import './App.css';
 
@@ -19,6 +20,7 @@ export default class App extends Component {
       europe: [],
       middleEast: [],
       southAmerica: [],
+      australiaOceania: [],
     };
   }
 
@@ -29,6 +31,7 @@ export default class App extends Component {
     this.getAllAntarcticaCountries();
     this.getAllMiddleEastCountries();
     this.getAllSouthAmericanCountries();
+    this.getAllAustriliaAndOceaniaCountries();
   }
 
   getAllNorthAmericaCountries() {
@@ -133,6 +136,23 @@ export default class App extends Component {
       .catch(err => console.log('Error', err));
   }
 
+  getAllAustriliaAndOceaniaCountries() {
+    fetch(`/api/australiaOceania`, {
+     headers: {
+      'Content-Type': 'application/json',
+     },
+     method: 'GET',
+   })
+     .then(r => r.json())
+      .then((data) => {
+      console.log(data);
+      this.setState({
+       australiaOceania: data,
+     });
+    })
+    .catch(err => console.log('Error', err));
+  }
+
   render() {
     return (
       <div id="app">
@@ -140,13 +160,15 @@ export default class App extends Component {
         {this.props.children && React.cloneElement(this.props.children, {
           // STATE
           state: this.state,
+
         })}
         <Link to="northamerica" className="link-northAmerica">North America</Link>
         <Link to="africa" className="link-africa">Africa</Link>
-        <Link to="europe" className="link-europe">Europe</Link>
+        <Link to="europe" className="link-europe">European</Link>
         <Link to="middleEast" className="link-middleEast">Middle East</Link>
         <Link to="antarctica" className="link-antarctica">Antarctica</Link>
         <Link to="southAmerica" className="link-southAmerica">South America</Link>
+        <Link to="austriliaOceania" className="link-austriliaOceania"> Australia and Oceania </Link>
       </div>
     );
   }

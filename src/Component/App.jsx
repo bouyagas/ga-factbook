@@ -5,7 +5,7 @@ import AfricaContainer from './AfricaContainer/AfricaContainer.jsx';
 import EuropeanContainer from './EuropeanContainer/EuropeanContainer.jsx';
 import AntarcticaContainer from './AntarcticaContainer/AntarcticaContainer.jsx';
 import MiddleEastContainer from './MiddleEastContainer/MiddleEastContainer.jsx';
-import SouthAmericaContainer from './SouthAmericaContainer/southAmericaContainer.jsx';
+import SouthAmericaContainer from './SouthAmericaContainer/SouthAmericaContainer.jsx';
 import AustriliaAndOceaniaContainer from './AustriliaAndOceaniaContainer/AustriliaAndOceaniaContainer.jsx';
 import Map from './Map/Map.jsx';
 import './App.css';

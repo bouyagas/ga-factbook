@@ -1,7 +1,7 @@
 import React from 'react';
-import './southAmericaTemplate.css';
+import './SouthAmericaTemplate.css';
 
-const southAmericaTemplate = props => (
+const SouthAmericaTemplate = props => (
 	<div>
       <p>..///...</p>
      <p>{props.intro}</p>
@@ -9,4 +9,4 @@ const southAmericaTemplate = props => (
 );
 
 
-export default southAmericaTemplate;
+export default SouthAmericaTemplate;

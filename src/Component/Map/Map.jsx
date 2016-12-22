@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WorldMap from'react-world-map';
+var WorldMap = require('react-world-map');
 import './Map.css';
 
 export default class Map extends Component {

@@ -5,7 +5,7 @@ import AfricaContainer from './AfricaContainer/AfricaContainer.jsx';
 import EuropeanContainer from './EuropeanContainer/EuropeanContainer.jsx';
 import AntarcticaContainer from './AntarcticaContainer/AntarcticaContainer.jsx';
 import MiddleEastContainer from './MiddleEastContainer/MiddleEastContainer.jsx';
-import SouthAmericaContainer from './SouthAmericaContainer/SouthAmericaContainer.jsx';
+
 import AustriliaAndOceaniaContainer from './AustriliaAndOceaniaContainer/AustriliaAndOceaniaContainer.jsx';
 import Map from './Map/Map.jsx';
 import './App.css';
@@ -167,7 +167,7 @@ export default class App extends Component {
         <Link to="europe" className="link-europe">European</Link>
         <Link to="middleEast" className="link-middleEast">Middle East</Link>
         <Link to="antarctica" className="link-antarctica">Antarctica</Link>
-        <Link to="southAmerica" className="link-southAmerica">South America</Link>
+
         <Link to="austriliaOceania" className="link-austriliaOceania"> Australia and Oceania </Link>
       </div>
     );

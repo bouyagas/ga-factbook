@@ -8,7 +8,7 @@ import AfricaContainer from './Component/AfricaContainer/AfricaContainer.jsx';
 import EuropeanContainer from './Component/EuropeanContainer/EuropeanContainer.jsx';
 import AntarcticaContainer from './Component/AntarcticaContainer/AntarcticaContainer.jsx';
 import MiddleEastContainer from './Component/MiddleEastContainer/MiddleEastContainer.jsx';
-import SouthAmericaContainer from './Component/SouthAmericaContainer/SouthAmericaContainer.jsx';
+
 import AustriliaAndOceaniaContainer from './Component/AustriliaAndOceaniaContainer/AustriliaAndOceaniaContainer.jsx';
 
 
@@ -23,7 +23,7 @@ ReactDOM.render((
       <Route path="/europe" component={EuropeanContainer} />
       <Route path="/antarctica" component={AntarcticaContainer} />
       <Route path="/middleEast" component={MiddleEastContainer} />
-      <Route path="/southAmerica" component={SouthAmericaContainer} />
+
       <Route path="/austriliaOceania" component={AustriliaAndOceaniaContainer} />
     </Route>
   </Router>

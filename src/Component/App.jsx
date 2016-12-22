@@ -156,7 +156,7 @@ export default class App extends Component {
   render() {
     return (
       <div id="app">
-        <h1>Welcome to Factbook</h1>
+        <h1>Welcome to GA-Factbook</h1>
         {this.props.children && React.cloneElement(this.props.children, {
           // STATE
           state: this.state,

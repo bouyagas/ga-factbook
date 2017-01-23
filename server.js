@@ -38,9 +38,9 @@ server.use('/api/oceans', require('./routes/api/oceans.js'));
 
 server.use('/api/southAmerica', require('./routes/api/south-america.js'));
 
-server.use('./api/southAsia', require('./routes/api/south-asia.js'));
+server.use('/api/southAsia', require('./routes/api/south-asia.js'));
 
-server.use('./api/world', require('./routes/api/world.js'));
+server.use('/api/world', require('./routes/api/world.js'));
 
 server.listen(PORT, () => console.log('server here! listening on', PORT));
 
